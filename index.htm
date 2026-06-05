@@ -1,8 +1,341 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <title>
-    My site
-  </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
 </head>
-  
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Mt. Timpanogos Temple Cleaning Sign-Up&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="bg-slate-50 font-sans text-slate-800 antialiased"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;header class="bg-gradient-to-r from-cyan-700 to-blue-800 text-white shadow-md"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-4xl mx-auto px-4 py-8 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;i class="fa-solid fa-church text-4xl mb-3 text-cyan-200"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1 class="text-3xl font-bold tracking-tight md:text-4xl"&gt;Mt. Timpanogos Temple Cleaning&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="mt-2 text-cyan-100 text-lg"&gt;Volunteer Shift Coordinator — August 2026&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;main class="max-w-4xl mx-auto px-4 py-8"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex border-b border-slate-200 mb-6 bg-white rounded-t-lg shadow-sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button id="tab-signup" onclick="switchTab('signup')" class="flex-1 py-4 text-center font-medium border-b-2 border-cyan-600 text-cyan-600 focus:outline-none transition"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;i class="fa-solid fa-user-plus mr-2"&gt;&lt;/i&gt; Volunteer Sign-Up</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button id="tab-checklist" onclick="switchTab('checklist')" class="flex-1 py-4 text-center font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-700 focus:outline-none transition"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;i class="fa-solid fa-list-check mr-2"&gt;&lt;/i&gt; Preparation Checklist</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button id="tab-admin" onclick="switchTab('admin')" class="flex-1 py-4 text-center font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-700 focus:outline-none transition"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;i class="fa-solid fa-lock mr-2"&gt;&lt;/i&gt; Admin Portal</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="content-signup" class="space-y-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-xl font-semibold text-slate-900 mb-4 flex items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;i class="fa-solid fa-calendar-days text-cyan-600 mr-2"&gt;&lt;/i&gt; Available Shifts</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/h2&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="shifts-container" class="space-y-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="registration-form-container" class="hidden bg-white p-6 rounded-xl shadow-md border-2 border-cyan-500 transition-all"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-lg font-bold text-slate-900 mb-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Registering for: &lt;span id="selected-shift-title" class="text-cyan-600"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;form id="signup-form" onsubmit="handleFormSubmit(event)" class="space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="block text-sm font-semibold text-slate-700 mb-1"&gt;Full Name *&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="text" id="vol-name" required class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="block text-sm font-semibold text-slate-700 mb-1"&gt;Email Address *&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="email" id="vol-email" required class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="block text-sm font-semibold text-slate-700 mb-1"&gt;Phone Number *&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="tel" id="vol-phone" required placeholder="(801) 555-0123" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="block text-sm font-semibold text-slate-700 mb-1"&gt;Reminders Preference&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;select id="vol-reminder" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;option value="both"&gt;Both Email &amp; SMS Text&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;option value="email"&gt;Email Only&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;option value="sms"&gt;SMS Text Only&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-end space-x-3 pt-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button type="button" onclick="cancelRegistration()" class="px-4 py-2 border border-slate-300 rounded-lg text-slate-600 hover:bg-slate-50 font-medium transition"&gt;Cancel&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button type="submit" class="px-5 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg font-medium shadow transition"&gt;Confirm Sign-Up&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="content-checklist" class="hidden bg-white p-6 rounded-xl shadow-sm border border-slate-100 space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-xl font-semibold text-slate-900 flex items-center mb-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;i class="fa-solid fa-clipboard-check text-emerald-600 mr-2"&gt;&lt;/i&gt; Attire &amp; Preparation Guidelines</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-sm text-slate-600 mb-4"&gt;Please review these details carefully before your scheduled shift to ensure a smooth check-in process at the temple.&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;ul class="space-y-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;li class="flex items-start bg-slate-50 p-3 rounded-lg border border-slate-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;i class="fa-solid fa-circle-check text-emerald-500 mt-1 mr-3 flex-shrink-0"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;strong class="text-slate-800"&gt;Clothing:&lt;/strong&gt; Wear clean, comfortable white or light-colored clothing suitable for physical work. Modest Sunday attire is also completely acceptable if changing rooms are utilized.</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;li class="flex items-start bg-slate-50 p-3 rounded-lg border border-slate-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;i class="fa-solid fa-circle-check text-emerald-500 mt-1 mr-3 flex-shrink-0"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;strong class="text-slate-800"&gt;Footwear:&lt;/strong&gt; Please bring clean, soft-soled shoes or white slippers to change into inside the temple. Heavy or outside shoes are restricted in carpeted areas.</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;li class="flex items-start bg-slate-50 p-3 rounded-lg border border-slate-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;i class="fa-solid fa-circle-check text-emerald-500 mt-1 mr-3 flex-shrink-0"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;strong class="text-slate-800"&gt;Arrival Time:&lt;/strong&gt; Arrive exactly 10–15 minutes early at the designated volunteer entrance to receive assignments and pass security check-in.</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="content-admin" class="hidden bg-white p-6 rounded-xl shadow-sm border border-slate-100 space-y-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="admin-auth" class="max-w-md mx-auto text-center py-6 space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;i class="fa-solid fa-vault text-4xl text-slate-400"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-lg font-bold text-slate-800"&gt;Administrative Sign-In&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex max-w-xs mx-auto space-x-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="password" id="admin-passcode" placeholder="Enter Admin Passcode" class="w-full px-3 py-2 border border-slate-300 rounded-lg text-center focus:ring-2 focus:ring-cyan-500 focus:outline-none"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button onclick="checkAdminAuth()" class="px-4 py-2 bg-slate-800 hover:bg-slate-900 text-white rounded-lg font-medium shadow transition"&gt;Enter&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p id="auth-error" class="text-xs text-red-500 font-medium hidden"&gt;Incorrect passcode. Please try again.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="admin-dashboard" class="hidden space-y-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex flex-col sm:flex-row sm:items-center sm:justify-between border-b border-slate-200 pb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2 class="text-xl font-bold text-slate-900"&gt;Volunteer Rosters&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-sm text-slate-500"&gt;Review shift distributions and manage assignments.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button onclick="exportToCSV()" class="mt-3 sm:mt-0 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium rounded-lg shadow flex items-center justify-center transition"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fa-solid fa-file-excel mr-2"&gt;&lt;/i&gt; Export Data (CSV)</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="overflow-x-auto rounded-lg border border-slate-200 shadow-sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;table class="w-full text-left border-collapse bg-white"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;thead class="bg-slate-50 text-slate-700 text-xs font-semibold uppercase tracking-wider border-b border-slate-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;th class="p-4"&gt;Volunteer&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;th class="p-4"&gt;Contact Info&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;th class="p-4"&gt;Assigned Shift&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;th class="p-4 text-center"&gt;Reminders&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;tbody id="roster-table-body" class="divide-y divide-slate-100 text-sm text-slate-700"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Mock Application Database State</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let state = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>shifts: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ id: 1, title: "Friday Evening — General Deep Clean", date: "August 14, 2026", time: "6:00 PM - 9:00 PM", capacity: 25, filled: 3 },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ id: 2, title: "Saturday Morning — Celestial Rooms &amp; Ordinance Carpets", date: "August 15, 2026", time: "7:00 AM - 10:30 AM", capacity: 15, filled: 5 },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ id: 3, title: "Saturday Midday — Windows &amp; High Fixtures", date: "August 15, 2026", time: "11:00 AM - 2:00 PM", capacity: 20, filled: 0 }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>],</p>
+<p class="p1"><span class="Apple-converted-space">            </span>volunteers: [</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ name: "John Burt", email: "john.burt@example.com", phone: "801-555-1234", shiftId: 1, type: "both" },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ name: "Sarah Jenkins", email: "sarah.j@example.com", phone: "801-555-5678", shiftId: 2, type: "email" },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>{ name: "David Miller", email: "d.miller@example.com", phone: "801-555-9012", shiftId: 2, type: "sms" }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>],</p>
+<p class="p1"><span class="Apple-converted-space">            </span>selectedShiftId: null</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const ADMIN_PASSCODE = "1234"; // Simple, functional demo pass code</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Initial render setup</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.addEventListener("DOMContentLoaded", () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>renderShifts();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Tab Switch Management UI</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function switchTab(target) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>['signup', 'checklist', 'admin'].forEach(tab =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const button = document.getElementById(`tab-${tab}`);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const content = document.getElementById(`content-${tab}`);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (tab === target) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>button.classList.add('text-cyan-600', 'border-cyan-600');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>button.classList.remove('text-slate-500', 'border-transparent');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>content.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>button.classList.remove('text-cyan-600', 'border-cyan-600');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>button.classList.add('text-slate-500', 'border-transparent');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>content.classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Render Shifts List View</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function renderShifts() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const container = document.getElementById('shifts-container');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>container.innerHTML = '';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>state.shifts.forEach(shift =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const remaining = shift.capacity - shift.filled;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const isFull = remaining &lt;= 0;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const card = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>card.className = `p-4 border rounded-xl flex flex-col md:flex-row md:items-center md:justify-between transition ${isFull ? 'bg-slate-50 border-slate-200' : 'bg-white border-slate-200 hover:border-cyan-300 hover:shadow-sm'}`;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>card.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="space-y-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="font-bold text-slate-900"&gt;${shift.title}&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="text-sm text-slate-600 flex flex-wrap gap-x-4 gap-y-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span&gt;&lt;i class="fa-regular fa-calendar mr-1 text-slate-400"&gt;&lt;/i&gt; ${shift.date}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span&gt;&lt;i class="fa-regular fa-clock mr-1 text-slate-400"&gt;&lt;/i&gt; ${shift.time}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="text-xs font-semibold ${isFull ? 'text-red-500' : remaining &lt;= 5 ? 'text-amber-600' : 'text-slate-500'}"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>${isFull ? 'Shift Full' : `${remaining} spots remaining / ${shift.capacity} total`}</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="mt-3 md:mt-0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button onclick="openRegistration(${shift.id})" ${isFull ? 'disabled' : ''} class="w-full md:w-auto px-4 py-2 rounded-lg text-sm font-semibold transition ${isFull ? 'bg-slate-200 text-slate-400 cursor-not-allowed' : 'bg-cyan-50 hover:bg-cyan-100 text-cyan-700'}"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>${isFull ? 'Filled' : 'Select Shift'}</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>container.appendChild(card);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Registration Panel Actions</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function openRegistration(shiftId) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>state.selectedShiftId = shiftId;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const shift = state.shifts.find(s =&gt; s.id === shiftId);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('selected-shift-title').innerText = `${shift.title} (${shift.date})`;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const formContainer = document.getElementById('registration-form-container');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>formContainer.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>formContainer.scrollIntoView({ behavior: 'smooth' });</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function cancelRegistration() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>state.selectedShiftId = null;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('signup-form').reset();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('registration-form-container').add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function handleFormSubmit(event) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>event.preventDefault();</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const name = document.getElementById('vol-name').value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const email = document.getElementById('vol-email').value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const phone = document.getElementById('vol-phone').value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const type = document.getElementById('vol-reminder').value;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Update registration state tracking</p>
+<p class="p1"><span class="Apple-converted-space">            </span>state.volunteers.push({</p>
+<p class="p1"><span class="Apple-converted-space">                </span>name, email, phone, shiftId: state.selectedShiftId, type</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Increment filled value on active target shift</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const shift = state.shifts.find(s =&gt; s.id === state.selectedShiftId);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>shift.filled++;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Reset view state</p>
+<p class="p1"><span class="Apple-converted-space">            </span>alert(`Success! Thank you for signing up, ${name}. A reminder note has been queued up.`);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('signup-form').reset();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('registration-form-container').classList.add('hidden');</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>renderShifts();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>renderRoster(); // syncs dashboard roster background content</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Administrative Access Controls</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function checkAdminAuth() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const pin = document.getElementById('admin-passcode').value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (pin === ADMIN_PASSCODE) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('admin-auth').classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('admin-dashboard').classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>renderRoster();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('auth-error').classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Build Admin Dashboard rows</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function renderRoster() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const tbody = document.getElementById('roster-table-body');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>tbody.innerHTML = '';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (state.volunteers.length === 0) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>tbody.innerHTML = `&lt;tr&gt;&lt;td colspan="4" class="p-4 text-center text-slate-400"&gt;No active volunteer registrations yet.&lt;/td&gt;&lt;/tr&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>state.volunteers.forEach(v =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const shift = state.shifts.find(s =&gt; s.id === v.shiftId);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const tr = document.createElement('tr');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>tr.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td class="p-4 font-medium text-slate-900"&gt;${v.name}&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td class="p-4 text-slate-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;&lt;i class="fa-regular fa-envelope text-xs mr-1"&gt;&lt;/i&gt; ${v.email}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;&lt;i class="fa-solid fa-phone text-xs mr-1"&gt;&lt;/i&gt; ${v.phone}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td class="p-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="inline-flex px-2 py-1 text-xs font-semibold bg-cyan-50 text-cyan-700 rounded-md"&gt;${shift ? shift.title : 'Unknown Shift'}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;td class="p-4 text-center text-xs text-slate-500 capitalize"&gt;${v.type}&lt;/td&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>tbody.appendChild(tr);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Flat CSV Data Exporter (Simulated Excel Download Integration)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function exportToCSV() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let csvContent = "data:text/csv;charset=utf-8,Full Name,Email,Phone,Assigned Shift,Preference\n";</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>state.volunteers.forEach(v =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const shift = state.shifts.find(s =&gt; s.id === v.shiftId);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const shiftTitle = shift ? shift.title.replace(/,/g, "") : "Unknown";</p>
+<p class="p1"><span class="Apple-converted-space">                </span>csvContent += `"${v.name}","${v.email}","${v.phone}","${shiftTitle}","${v.type}"\n`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const encodedUri = encodeURI(csvContent);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const link = document.createElement("a");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>link.setAttribute("href", encodedUri);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>link.setAttribute("download", "Temple_Cleaning_Volunteer_Roster_2026.csv");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.body.appendChild(link);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>link.click();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.body.removeChild(link);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
 </html>
