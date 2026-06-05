@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mt. Timpanogos Temple Cleaning Sign-Up</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased">
+
+    <header class="bg-gradient-to-r from-cyan-700 to-blue-800 text-white shadow-md">
+        <div class="max-w-4xl mx-auto px-4 py-8 text-center">
+            <i class="fa-solid fa-church text-4xl mb-3 text-cyan-200"></i>
+            <h1 class="text-3xl font-bold tracking-tight md:text-4xl">Mt. Timpanogos Temple Cleaning</h1>
+            <p class="mt-2 text-cyan-100 text-lg">Volunteer Shift Coordinator — August 2026</p>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        
+        <div class="flex border-b border-slate-200 mb-6 bg-white rounded-t-lg shadow-sm">
+            <button id="tab-signup" onclick="switchTab('signup')" class="flex-1 py-4 text-center font-medium border-b-2 border-cyan-600 text-cyan-600 focus:outline-none transition">
+                <i class="fa-solid fa-user-plus mr-2"></i> Volunteer Sign-Up
+            </button>
+            <button id="tab-checklist" onclick="switchTab('checklist')" class="flex-1 py-4 text-center font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-700 focus:outline-none transition">
+                <i class="fa-solid fa-list-check mr-2"></i> Preparation Checklist
+            </button>
+            <button id="tab-admin" onclick="switchTab('admin')" class="flex-1 py-4 text-center font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-700 focus:outline-none transition">
+                <i class="fa-solid fa-lock mr-2"></i> Admin Portal
+            </button>
+        </div>
+
+        <section id="content-signup" class="space-y-6">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                <h2 class="text-xl font-semibold text-slate-900 mb-4 flex items-center">
+                    <i class="fa-solid fa-calendar-days text-cyan-600 mr-2"></i> Available Shifts
+                </h2>
+                
+                <div id="shifts-container" class="space-y-3">
+                    </div>
+            </div>
+
+            <div id="registration-form-container" class="hidden bg-white p-6 rounded-xl shadow-md border-2 border-cyan-500 transition-all">
+                <h3 class="text-lg font-bold text-slate-900 mb-2">
+                    Registering for: <span id="selected-shift-title" class="text-cyan-600"></span>
+                </h3>
+                <form id="signup-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Full Name *</label>
+                            <input type="text" id="vol-name" required class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Email Address *</label>
+                            <input type="email" id="vol-email" required class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Phone Number *</label>
+                            <input type="tel" id="vol-phone" required placeholder="(801) 555-0123" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Reminders Preference</label>
+                            <select id="vol-reminder" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                                <option value="both">Both Email & SMS Text</option>
+                                <option value="email">Email Only</option>
+                                <option value="sms">SMS Text Only</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex justify-end space-x-3 pt-2">
+                        <button type="button" onclick="cancelRegistration()" class="px-4 py-2 border border-slate-300 rounded-lg text-slate-600 hover:bg-slate-50 font-medium transition">Cancel</button>
+                        <button type="submit" class="px-5 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg font-medium shadow transition">Confirm Sign-Up</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section id="content-checklist" class="hidden bg-white p-6 rounded-xl shadow-sm border border-slate-100 space-y-4">
+            <h2 class="text-xl font-semibold text-slate-900 flex items-center mb-2">
+                <i class="fa-solid fa-clipboard-check text-emerald-600 mr-2"></i> Attire & Preparation Guidelines
+            </h2>
+            <p class="text-sm text-slate-600 mb-4">Please review these details carefully before your scheduled shift to ensure a smooth check-in process at the temple.</p>
+            
+            <ul class="space-y-3">
+                <li class="flex items-start bg-slate-50 p-3 rounded-lg border border-slate-100">
+                    <i class="fa-solid fa-circle-check text-emerald-500 mt-1 mr-3 flex-shrink-0"></i>
+                    <div>
+                        <strong class="text-slate-800">Clothing:</strong> Wear clean, comfortable white or light-colored clothing suitable for physical work. Modest Sunday attire is also completely acceptable if changing rooms are utilized.
+                    </div>
+                </li>
+                <li class="flex items-start bg-slate-50 p-3 rounded-lg border border-slate-100">
+                    <i class="fa-solid fa-circle-check text-emerald-500 mt-1 mr-3 flex-shrink-0"></i>
+                    <div>
+                        <strong class="text-slate-800">Footwear:</strong> Please bring clean, soft-soled shoes or white slippers to change into inside the temple. Heavy or outside shoes are restricted in carpeted areas.
+                    </div>
+                </li>
+                <li class="flex items-start bg-slate-50 p-3 rounded-lg border border-slate-100">
+                    <i class="fa-solid fa-circle-check text-emerald-500 mt-1 mr-3 flex-shrink-0"></i>
+                    <div>
+                        <strong class="text-slate-800">Arrival Time:</strong> Arrive exactly 10–15 minutes early at the designated volunteer entrance to receive assignments and pass security check-in.
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="content-admin" class="hidden bg-white p-6 rounded-xl shadow-sm border border-slate-100 space-y-6">
+            <div id="admin-auth" class="max-w-md mx-auto text-center py-6 space-y-4">
+                <i class="fa-solid fa-vault text-4xl text-slate-400"></i>
+                <h3 class="text-lg font-bold text-slate-800">Administrative Sign-In</h3>
+                <div class="flex max-w-xs mx-auto space-x-2">
+                    <input type="password" id="admin-passcode" placeholder="Enter Admin Passcode" class="w-full px-3 py-2 border border-slate-300 rounded-lg text-center focus:ring-2 focus:ring-cyan-500 focus:outline-none">
+                    <button onclick="checkAdminAuth()" class="px-4 py-2 bg-slate-800 hover:bg-slate-900 text-white rounded-lg font-medium shadow transition">Enter</button>
+                </div>
+                <p id="auth-error" class="text-xs text-red-500 font-medium hidden">Incorrect passcode. Please try again.</p>
+            </div>
+
+            <div id="admin-dashboard" class="hidden space-y-6">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between border-b border-slate-200 pb-4">
+                    <div>
+                        <h2 class="text-xl font-bold text-slate-900">Volunteer Rosters</h2>
+                        <p class="text-sm text-slate-500">Review shift distributions and manage assignments.</p>
+                    </div>
+                    <button onclick="exportToCSV()" class="mt-3 sm:mt-0 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium rounded-lg shadow flex items-center justify-center transition">
+                        <i class="fa-solid fa-file-excel mr-2"></i> Export Data (CSV)
+                    </button>
+                </div>
+
+                <div class="overflow-x-auto rounded-lg border border-slate-200 shadow-sm">
+                    <table class="w-full text-left border-collapse bg-white">
+                        <thead class="bg-slate-50 text-slate-700 text-xs font-semibold uppercase tracking-wider border-b border-slate-200">
+                            <tr>
+                                <th class="p-4">Volunteer</th>
+                                <th class="p-4">Contact Info</th>
+                                <th class="p-4">Assigned Shift</th>
+                                <th class="p-4 text-center">Reminders</th>
+                            </tr>
+                        </thead>
+                        <tbody id="roster-table-body" class="divide-y divide-slate-100 text-sm text-slate-700">
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Mock Application Database State
+        let state = {
+            shifts: [
+                { id: 1, title: "Friday Evening — General Deep Clean", date: "August 14, 2026", time: "6:00 PM - 9:00 PM", capacity: 25, filled: 3 },
+                { id: 2, title: "Saturday Morning — Celestial Rooms & Ordinance Carpets", date: "August 15, 2026", time: "7:00 AM - 10:30 AM", capacity: 15, filled: 5 },
+                { id: 3, title: "Saturday Midday — Windows & High Fixtures", date: "August 15, 2026", time: "11:00 AM - 2:00 PM", capacity: 20, filled: 0 }
+            ],
+            volunteers: [
+                { name: "John Burt", email: "john.burt@example.com", phone: "801-555-1234", shiftId: 1, type: "both" },
+                { name: "Sarah Jenkins", email: "sarah.j@example.com", phone: "801-555-5678", shiftId: 2, type: "email" },
+                { name: "David Miller", email: "d.miller@example.com", phone: "801-555-9012", shiftId: 2, type: "sms" }
+            ],
+            selectedShiftId: null
+        };
+
+        const ADMIN_PASSCODE = "1234"; // Simple, functional demo pass code
+
+        // Initial render setup
+        document.addEventListener("DOMContentLoaded", () => {
+            renderShifts();
+        });
+
+        // Tab Switch Management UI
+        function switchTab(target) {
+            ['signup', 'checklist', 'admin'].forEach(tab => {
+                const button = document.getElementById(`tab-${tab}`);
+                const content = document.getElementById(`content-${tab}`);
+                if (tab === target) {
+                    button.classList.add('text-cyan-600', 'border-cyan-600');
+                    button.classList.remove('text-slate-500', 'border-transparent');
+                    content.classList.remove('hidden');
+                } else {
+                    button.classList.remove('text-cyan-600', 'border-cyan-600');
+                    button.classList.add('text-slate-500', 'border-transparent');
+                    content.classList.add('hidden');
+                }
+            });
+        }
+
+        // Render Shifts List View
+        function renderShifts() {
+            const container = document.getElementById('shifts-container');
+            container.innerHTML = '';
+
+            state.shifts.forEach(shift => {
+                const remaining = shift.capacity - shift.filled;
+                const isFull = remaining <= 0;
+
+                const card = document.createElement('div');
+                card.className = `p-4 border rounded-xl flex flex-col md:flex-row md:items-center md:justify-between transition ${isFull ? 'bg-slate-50 border-slate-200' : 'bg-white border-slate-200 hover:border-cyan-300 hover:shadow-sm'}`;
+                
+                card.innerHTML = `
+                    <div class="space-y-1">
+                        <h4 class="font-bold text-slate-900">${shift.title}</h4>
+                        <div class="text-sm text-slate-600 flex flex-wrap gap-x-4 gap-y-1">
+                            <span><i class="fa-regular fa-calendar mr-1 text-slate-400"></i> ${shift.date}</span>
+                            <span><i class="fa-regular fa-clock mr-1 text-slate-400"></i> ${shift.time}</span>
+                        </div>
+                        <div class="text-xs font-semibold ${isFull ? 'text-red-500' : remaining <= 5 ? 'text-amber-600' : 'text-slate-500'}">
+                            ${isFull ? 'Shift Full' : `${remaining} spots remaining / ${shift.capacity} total`}
+                        </div>
+                    </div>
+                    <div class="mt-3 md:mt-0">
+                        <button onclick="openRegistration(${shift.id})" ${isFull ? 'disabled' : ''} class="w-full md:w-auto px-4 py-2 rounded-lg text-sm font-semibold transition ${isFull ? 'bg-slate-200 text-slate-400 cursor-not-allowed' : 'bg-cyan-50 hover:bg-cyan-100 text-cyan-700'}">
+                            ${isFull ? 'Filled' : 'Select Shift'}
+                        </button>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Registration Panel Actions
+        function openRegistration(shiftId) {
+            state.selectedShiftId = shiftId;
+            const shift = state.shifts.find(s => s.id === shiftId);
+            document.getElementById('selected-shift-title').innerText = `${shift.title} (${shift.date})`;
+            
+            const formContainer = document.getElementById('registration-form-container');
+            formContainer.classList.remove('hidden');
+            formContainer.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function cancelRegistration() {
+            state.selectedShiftId = null;
+            document.getElementById('signup-form').reset();
+            document.getElementById('registration-form-container').add('hidden');
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('vol-name').value;
+            const email = document.getElementById('vol-email').value;
+            const phone = document.getElementById('vol-phone').value;
+            const type = document.getElementById('vol-reminder').value;
+
+            // Update registration state tracking
+            state.volunteers.push({
+                name, email, phone, shiftId: state.selectedShiftId, type
+            });
+
+            // Increment filled value on active target shift
+            const shift = state.shifts.find(s => s.id === state.selectedShiftId);
+            shift.filled++;
+
+            // Reset view state
+            alert(`Success! Thank you for signing up, ${name}. A reminder note has been queued up.`);
+            document.getElementById('signup-form').reset();
+            document.getElementById('registration-form-container').classList.add('hidden');
+            
+            renderShifts();
+            renderRoster(); // syncs dashboard roster background content
+        }
+
+        // Administrative Access Controls
+        function checkAdminAuth() {
+            const pin = document.getElementById('admin-passcode').value;
+            if (pin === ADMIN_PASSCODE) {
+                document.getElementById('admin-auth').classList.add('hidden');
+                document.getElementById('admin-dashboard').classList.remove('hidden');
+                renderRoster();
+            } else {
+                document.getElementById('auth-error').classList.remove('hidden');
+            }
+        }
+
+        // Build Admin Dashboard rows
+        function renderRoster() {
+            const tbody = document.getElementById('roster-table-body');
+            tbody.innerHTML = '';
+
+            if (state.volunteers.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="4" class="p-4 text-center text-slate-400">No active volunteer registrations yet.</td></tr>`;
+                return;
+            }
+
+            state.volunteers.forEach(v => {
+                const shift = state.shifts.find(s => s.id === v.shiftId);
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td class="p-4 font-medium text-slate-900">${v.name}</td>
+                    <td class="p-4 text-slate-500">
+                        <div><i class="fa-regular fa-envelope text-xs mr-1"></i> ${v.email}</div>
+                        <div><i class="fa-solid fa-phone text-xs mr-1"></i> ${v.phone}</div>
+                    </td>
+                    <td class="p-4">
+                        <span class="inline-flex px-2 py-1 text-xs font-semibold bg-cyan-50 text-cyan-700 rounded-md">${shift ? shift.title : 'Unknown Shift'}</span>
+                    </td>
+                    <td class="p-4 text-center text-xs text-slate-500 capitalize">${v.type}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Flat CSV Data Exporter (Simulated Excel Download Integration)
+        function exportToCSV() {
+            let csvContent = "data:text/csv;charset=utf-8,Full Name,Email,Phone,Assigned Shift,Preference\n";
+            
+            state.volunteers.forEach(v => {
+                const shift = state.shifts.find(s => s.id === v.shiftId);
+                const shiftTitle = shift ? shift.title.replace(/,/g, "") : "Unknown";
+                csvContent += `"${v.name}","${v.email}","${v.phone}","${shiftTitle}","${v.type}"\n`;
+            });
+
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "Temple_Cleaning_Volunteer_Roster_2026.csv");
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
